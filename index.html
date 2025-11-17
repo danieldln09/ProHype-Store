@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sportify - Tienda de artículos deportivos</title>
+  <meta name="description" content="Tienda online de artículos deportivos: ropa, zapatillas, accesorios y equipamiento. Envios rápidos y garantía de calidad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#0f172a">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Sportify</a>
+      <nav class="nav" id="nav">
+        <a href="#productos">Productos</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="actions">
+        <button class="btn icon-btn" id="searchBtn" aria-label="Buscar">🔍</button>
+        <button class="btn icon-btn" id="cartBtn" aria-label="Carrito">🛒 <span id="cartCount" class="cart-count">0</span></button>
+        <button class="btn btn-primary mobile-toggle" id="mobileToggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Equipamiento deportivo que impulsa tu rendimiento</h1>
+          <p>Ropa, zapatillas y accesorios seleccionados por atletas. Calidad, comodidad y estilo para cada entrenamiento.</p>
+          <div class="hero-ctas">
+            <a href="#productos" class="btn btn-cta">Comprar ahora</a>
+            <a href="#categorias" class="btn btn-outline">Ver categorías</a>
+          </div>
+          <ul class="features">
+            <li>Envío rápido en 24-48h</li>
+            <li>Devoluciones fáciles</li>
+            <li>Soporte 24/7</li>
+          </ul>
+        </div>
+        <div class="hero-media" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1526406915891-30a44f2d7f62?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Atleta corriendo con zapatillas deportivas">
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias" class="container categorias">
+      <h2>Categorías populares</h2>
+      <div class="grid categorias-grid">
+        <a class="card categoria-card" href="#productos?cat=zapatillas">
+          <img src="https://images.unsplash.com/photo-1515548214881-0c6f6a1b0bdf?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Zapatillas">
+          <div class="card-body">
+            <h3>Zapatillas</h3>
+            <p>Amortiguación y estilo para correr y entrenar.</p>
+          </div>
+        </a>
+        <a class="card categoria-card" href="#productos?cat=ropa">
+          <img src="https://images.unsplash.com/photo-1520975912296-7f7b6e24f8e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Ropa deportiva">
+          <div class="card-body">
+            <h3>Ropa</h3>
+            <p>Materiales transpirables y cortes modernos.</p>
+          </div>
+        </a>
+        <a class="card categoria-card" href="#productos?cat=accesorios">
+          <img src="https://images.unsplash.com/photo-1519822470129-1f3f9f3a0c2a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Accesorios deportivos">
+          <div class="card-body">
+            <h3>Accesorios</h3>
+            <p>Desde botellas hasta cintas y guantes.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="productos" class="container productos">
+      <div class="section-header">
+        <h2>Productos destacados</h2>
+        <div class="filters">
+          <label for="sort">Ordenar:</label>
+          <select id="sort">
+            <option value="featured">Destacados</option>
+            <option value="price-asc">Precio: bajo a alto</option>
+            <option value="price-desc">Precio: alto a bajo</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid products-grid" id="productsGrid">
+        <!-- Producto 1 -->
+        <article class="product-card" data-id="p1">
+          <img class="product-img" src="https://images.unsplash.com/photo-1519744346366-0d63a4d8c1b0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Zapatillas running">
+          <div class="product-body">
+            <h3 class="product-title">Zapatillas Runner X</h3>
+            <p class="product-price">USD 119.99</p>
+            <p class="product-desc">Ligera, con excelente amortiguación y suela anti-deslizante.</p>
+            <div class="product-actions">
+              <button class="btn btn-outline quickview-btn" data-id="p1">Vista rápida</button>
+              <button class="btn btn-primary add-to-cart" data-id="p1">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 2 -->
+        <article class="product-card" data-id="p2">
+          <img class="product-img" src="https://images.unsplash.com/photo-1526406915891-30a44f2d7f62?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Camiseta deportiva">
+          <div class="product-body">
+            <h3 class="product-title">Camiseta Pro Dry</h3>
+            <p class="product-price">USD 29.99</p>
+            <p class="product-desc">Tejido técnico que evapora el sudor rápidamente.</p>
+            <div class="product-actions">
+              <button class="btn btn-outline quickview-btn" data-id="p2">Vista rápida</button>
+              <button class="btn btn-primary add-to-cart" data-id="p2">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Producto 3 -->
+        <article class="product-card" data-id="p3">
+          <img class="product-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Mancuernas">
+          <div class="product-body">
+            <h3 class="product-title">Set Mancuernas 2x10kg</h3>
+            <p class="product-price">USD 79.99</p>
+            <p class="product-desc">Acabado en goma, aptas para entrenamiento en casa.</p>
+            <div class="product-actions">
+              <button class="btn btn-outline quickview-btn" data-id="p3">Vista rápida</button>
+              <button class="btn btn-primary add-to-cart" data-id="p3">Añadir</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Agrega más productos según necesites -->
+      </div>
+    </section>
+
+    <section id="testimonios" class="container testimonios">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="grid testimonial-grid">
+        <blockquote class="testimonial">
+          <p>"La calidad de las zapatillas es increíble. Llegaron rápido y me encantaron."</p>
+          <cite>— Laura P.</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"El servicio al cliente respondió enseguida y me ayudaron con el cambio de talla."</p>
+          <cite>— Marco R.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="suscripcion" class="container suscripcion">
+      <div class="suscripcion-inner">
+        <div>
+          <h3>Únete a nuestra newsletter</h3>
+          <p>Recibe ofertas exclusivas, lanzamientos y consejos de entrenamiento.</p>
+        </div>
+        <form id="newsletterForm" class="newsletter-form">
+          <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required>
+          <button class="btn btn-primary" type="submit">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contacto" class="container contacto">
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas? Escríbenos a <a href="mailto:info@sportify.example">info@sportify.example</a> o usa el chat en vivo.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Sportify</strong>
+        <p>Equipamiento deportivo con entrega rápida.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Términos</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Devoluciones</a>
+      </div>
+      <div class="footer-contact">
+        <p>Soporte: <a href="mailto:soporte@sportify.example">soporte@sportify.example</a></p>
+        <p>Tel: +1 555 123 456</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal vista rápida -->
+  <div id="quickviewModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

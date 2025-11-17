@@ -1,0 +1,22 @@
+<!-- PayPal Buy Now (form clásico). Reemplaza business (tu correo de vendedor), item_name, amount, currency_code y return / cancel_return por tus valores -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <!-- Tipo de botón -->
+  <input type="hidden" name="cmd" value="_xclick">
+  <!-- Tu cuenta PayPal (email de negocio) -->
+  <input type="hidden" name="business" value="TU_CORREO_NEGOCIO@ejemplo.com">
+  <!-- Datos del producto -->
+  <input type="hidden" name="item_name" value="Zapatillas Runner X">
+  <input type="hidden" name="item_number" value="SKU-001">
+  <input type="hidden" name="amount" value="119.99">
+  <input type="hidden" name="currency_code" value="USD">
+  <!-- Opciones visuales / facturación -->
+  <input type="hidden" name="no_shipping" value="1"> <!-- 0 muestra dirección, 1 no la solicita -->
+  <input type="hidden" name="no_note" value="1">
+  <!-- URL a la que PayPal redirige al finalizar (opcional) -->
+  <input type="hidden" name="return" value="https://tusitio.example/gracias.html">
+  <input type="hidden" name="cancel_return" value="https://tusitio.example/cancelado.html">
+  <!-- Botón -->
+  <button type="submit" style="background:#0070ba;color:white;padding:8px 12px;border-radius:8px;border:none;cursor:pointer">
+    Pagar con PayPal
+  </button>
+</form>
